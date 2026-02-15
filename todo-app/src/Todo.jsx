@@ -4,7 +4,10 @@ function Todo() {
   const [cards, setCards] = useState([]);
 
   const addCard = () => {
-    const newCard = { id: Date.now(), title: "New Card" };
+    const newCard = {
+         id: Date.now(), 
+         title: "New Card" 
+        };
     setCards(prev => [...prev, newCard]);
   };
 
@@ -13,7 +16,8 @@ function Todo() {
       <button onClick={addCard}>Add Card</button>
       <div className="cards">
         {cards.map(card => (
-          <div key={card.id} className="card">
+          <div key={card.id} 
+          className="card">
             {card.title}
           </div>
         ))}
